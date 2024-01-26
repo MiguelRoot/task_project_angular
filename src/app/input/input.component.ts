@@ -7,18 +7,14 @@ import { TaskService } from '../task.service';
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './input.component.html',
-  styleUrl: './input.component.scss'
+  styleUrl: './input.component.scss',
 })
 export class InputComponent {
-
   valueInput!: FormControl;
 
-  constructor(
-    private taksService: TaskService,
-  ){
+  constructor(private taksService: TaskService) {
     this.valueInput = new FormControl('');
   }
-
 
   addTask() {
     const value = this.valueInput.value;
@@ -26,6 +22,4 @@ export class InputComponent {
     this.valueInput.setValue('');
     console.log(this.taksService.tasks);
   }
-
-
 }
