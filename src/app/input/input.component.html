@@ -1,10 +1,40 @@
-<div class="bg-yellow-200">
-    <div class="flex items-center p-4">
-    <input [formControl]="valueInput" type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-    <button (click)="addTask()" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Agregar</button>
-</div>
-valor: {{valueInput.value}}
+<div class="bg-blue-700  p-5">
 
+
+    <div class="max-w-screen-xl mx-auto relative">
+
+        <svg class="absolute right-8 top-[-70px] opacity-50" width="150" height="150" viewBox="0 0 167 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_8937_2263)">
+            <path d="M-0.000245085 83.4236C0.111684 37.1241 37.5694 -0.194871 83.7374 -0.00563112C129.944 0.178097 167.093 37.5099 167 83.6606C166.906 129.811 129.439 167.151 83.3961 166.993C37.173 166.836 -0.110339 129.479 -0.000245085 83.4236Z" fill="#010101"/>
+            <path d="M31.744 89.7863C38.2946 89.7863 44.847 89.8249 51.3976 89.755C52.7389 89.7403 53.2692 90.1225 53.5995 91.46C57.0528 105.001 69.3796 114.465 83.5084 114.498C90.343 114.517 96.9912 112.268 102.413 108.101C107.835 103.935 111.725 98.0866 113.474 91.4711C113.841 90.1041 114.349 89.755 115.676 89.7605C128.847 89.8034 142.019 89.8034 155.191 89.7605C156.659 89.7605 156.938 90.0361 156.776 91.5813C153.637 121.546 131.798 147.72 101.272 155.003C76.2752 160.965 53.7481 155.341 34.377 138.335C21.1657 126.743 13.516 111.953 10.6297 94.6569C9.81687 89.7844 9.80586 89.7881 14.7876 89.7881L31.744 89.7863Z" fill="white"/>
+            <path d="M135.177 77.1459C128.766 77.1459 122.353 77.0981 115.944 77.1808C114.414 77.201 113.806 76.6792 113.392 75.2259C109.76 62.4788 98.6059 53.2501 86.1011 52.5575C72.0127 51.7748 60.1225 59.0394 54.7829 71.691C54.6233 72.0713 54.4784 72.4608 54.3462 72.8503C52.8783 77.1459 52.8783 77.1459 48.2177 77.1459C36.3587 77.1459 24.5015 77.1183 12.6426 77.1734C10.8792 77.1734 10.1031 77.0044 10.4205 74.8364C14.6041 46.2317 29.9108 25.9481 56.5958 15.1246C85.3543 3.45054 117.166 11.1947 138.053 34.0726C148.524 45.5427 154.649 59.1148 156.585 74.5516C156.908 77.144 156.886 77.1514 154.213 77.1532C147.866 77.1495 141.521 77.1471 135.177 77.1459Z" fill="#EB2127"/>
+            <path d="M83.6936 105.201C71.9263 105.306 61.9536 95.6691 61.8582 84.1016C61.7573 71.7422 71.2639 61.8705 83.3358 61.7915C95.2351 61.7161 105.074 71.3949 105.224 83.3263C105.378 95.1823 95.6186 105.104 83.6936 105.201Z" fill="white"/>
+            <path d="M83.6897 72.863C89.688 72.931 94.2496 77.6786 94.1762 83.7747C94.1046 89.6283 89.332 94.2086 83.3503 94.1645C81.9557 94.1554 80.5766 93.8707 79.2921 93.3267C78.0077 92.7827 76.8431 91.9901 75.8653 90.9944C74.8874 89.9988 74.1155 88.8196 73.5939 87.5245C73.0722 86.2295 72.811 84.844 72.8253 83.4476C72.9023 77.425 77.6529 72.7951 83.6897 72.863Z" fill="#010101"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_8937_2263">
+            <rect width="167" height="167" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
+        <h1 class="text-white text-4xl font-bold mb-10">
+            ¿A quién estás buscando?
+        </h1>
+    
+        <div class="flex items-center">   
+            <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Buscar</label>
+            <div class="relative w-full">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input [formControl]="valueInput" type="search" id="search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar" required>
+                <button type="submit" (click)="addTask()" class="text-white absolute end-2.5 bottom-2.5 bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Buscar</button>
+            </div>
+        </div>
+    </div>
 
 
 </div>

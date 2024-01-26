@@ -13,6 +13,7 @@ export class ViewComponent {
   constructor(
     private taksService: TaskService,
   ){}
+  
   get tasks() {
     return this.taksService.tasks;
   }
