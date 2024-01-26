@@ -7,17 +7,21 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './view.component.html',
-  styleUrl: './view.component.scss'
+  styleUrl: './view.component.scss',
 })
 export class ViewComponent {
-  constructor(
-    private taksService: TaskService,
-  ){}
-  
+  pokemonData: any;
+  constructor(private taksService: TaskService) {}
+
   get tasks() {
     return this.taksService.tasks;
   }
-
-
-
+  async ngOnInit(): Promise<void> {
+    try {
+      // Obtén los datos del Pokemon directamente usando el servicio.
+      this.pokemonData = await this.taksService.getPokemon();
+    } catch (error) {
+      console.error('Error al obtener datos de Pokémon:', error);
+    }
+  }
 }

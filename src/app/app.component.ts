@@ -8,7 +8,7 @@ import { ViewComponent } from './view/view.component';
   standalone: true,
   imports: [RouterOutlet, InputComponent, ViewComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'projectv2';
