@@ -38,3 +38,11 @@
 
 
 </div>
+<div>
+<div *ngIf="pok" class="bg-gray-200 p-4 ">
+    <div class="grid gap-4 grid-cols-3 grid-rows-1 items-center ">
+        <h1 class="bg-slate-300">NOMBRE: {{pok.name}}</h1>
+        <h1 class="bg-zinc-500">ALTO: {{pok.height}}</h1>
+        <h1 class="bg-sky-400">ID: {{pok.id}}</h1>
+    </div>
+</div>  
